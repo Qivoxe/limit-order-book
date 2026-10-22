@@ -10,6 +10,7 @@
 #include <optional>
 #include <unordered_map>
 #include <vector>
+#include <list>
 
 namespace lob
 {
@@ -24,7 +25,7 @@ namespace lob
 
     struct PriceLevel
     {
-        std::deque<Order> orders;
+        std::list<Order> orders;
         Quantity total_quantity{0};
     };
 
@@ -32,6 +33,7 @@ namespace lob
     {
         Side side;
         Price price;
+        std::list<Order>::iterator order_it;
     };
 
     class OrderBook

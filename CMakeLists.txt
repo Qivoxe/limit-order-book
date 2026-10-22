@@ -81,3 +81,8 @@ add_executable(lob_benchmark
 )
 
 target_link_libraries(lob_benchmark PRIVATE lob)
+add_executable(cancellation_benchmark
+    benchmarks/cancellation_benchmark.cpp
+)
+
+target_link_libraries(cancellation_benchmark PRIVATE lob)

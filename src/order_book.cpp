@@ -2,6 +2,7 @@
 #include "lob/order_book.hpp"
 
 #include <algorithm>
+#include <iterator>
 
 namespace lob
 {
@@ -23,17 +24,25 @@ namespace lob
             auto &level = bids_[order.price];
             level.orders.push_back(order);
             level.total_quantity += order.quantity;
+
+            const auto order_it = std::prev(level.orders.end());
+
+            order_locations_.emplace(
+                order.id,
+                OrderLocation{order.side, order.price, order_it});
         }
         else
         {
             auto &level = asks_[order.price];
             level.orders.push_back(order);
             level.total_quantity += order.quantity;
-        }
 
-        order_locations_.emplace(
-            order.id,
-            OrderLocation{order.side, order.price});
+            const auto order_it = std::prev(level.orders.end());
+
+            order_locations_.emplace(
+                order.id,
+                OrderLocation{order.side, order.price, order_it});
+        }
 
         return true;
     }
@@ -42,7 +51,9 @@ namespace lob
     {
         std::vector<Trade> trades;
 
-        if (order.id == 0 || order.price <= 0 || order.quantity == 0 ||
+        if (order.id == 0 ||
+            order.price <= 0 ||
+            order.quantity == 0 ||
             order_locations_.contains(order.id))
         {
             return trades;
@@ -57,6 +68,7 @@ namespace lob
             match_sell(order, trades);
         }
 
+        // Rest any unfilled quantity on the book.
         if (order.quantity > 0)
         {
             add_order(order);
@@ -73,6 +85,7 @@ namespace lob
         {
             auto level_it = asks_.begin();
 
+            // Buy limit price cannot be below the best ask.
             if (level_it->first > incoming.price)
             {
                 break;
@@ -84,6 +97,7 @@ namespace lob
             const Quantity executed =
                 std::min(incoming.quantity, resting.quantity);
 
+            // The resting order determines the execution price.
             trades.push_back({incoming.id,
                               resting.id,
                               resting.price,
@@ -95,6 +109,7 @@ namespace lob
 
             if (resting.quantity == 0)
             {
+                // Remove the index before invalidating its list iterator.
                 order_locations_.erase(resting.id);
                 level.orders.pop_front();
             }
@@ -114,6 +129,7 @@ namespace lob
         {
             auto level_it = bids_.begin();
 
+            // Sell limit price cannot exceed the best bid.
             if (level_it->first < incoming.price)
             {
                 break;
@@ -169,21 +185,8 @@ namespace lob
 
             auto &level = level_it->second;
 
-            auto order_it = std::find_if(
-                level.orders.begin(),
-                level.orders.end(),
-                [order_id](const Order &order)
-                {
-                    return order.id == order_id;
-                });
-
-            if (order_it == level.orders.end())
-            {
-                return false;
-            }
-
-            level.total_quantity -= order_it->quantity;
-            level.orders.erase(order_it);
+            level.total_quantity -= location.order_it->quantity;
+            level.orders.erase(location.order_it);
 
             if (level.orders.empty())
             {
@@ -201,21 +204,8 @@ namespace lob
 
             auto &level = level_it->second;
 
-            auto order_it = std::find_if(
-                level.orders.begin(),
-                level.orders.end(),
-                [order_id](const Order &order)
-                {
-                    return order.id == order_id;
-                });
-
-            if (order_it == level.orders.end())
-            {
-                return false;
-            }
-
-            level.total_quantity -= order_it->quantity;
-            level.orders.erase(order_it);
+            level.total_quantity -= location.order_it->quantity;
+            level.orders.erase(location.order_it);
 
             if (level.orders.empty())
             {
@@ -251,6 +241,7 @@ namespace lob
     {
         return order_locations_.size();
     }
+
     std::optional<Quantity> OrderBook::bid_quantity_at(Price price) const
     {
         const auto it = bids_.find(price);
@@ -274,4 +265,5 @@ namespace lob
 
         return it->second.total_quantity;
     }
+
 } // namespace lob
