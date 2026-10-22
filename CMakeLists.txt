@@ -76,3 +76,8 @@ target_link_libraries(test_invariants PRIVATE
 )
 
 gtest_discover_tests(test_invariants)
+add_executable(lob_benchmark
+    benchmarks/benchmark.cpp
+)
+
+target_link_libraries(lob_benchmark PRIVATE lob)

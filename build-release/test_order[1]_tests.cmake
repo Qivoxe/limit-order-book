@@ -1,0 +1,5 @@
+add_test([=[OrderTest.StoresBuyOrderFields]=]  /home/devshiv/projects/limit-order-book/build-release/test_order [==[--gtest_filter=OrderTest.StoresBuyOrderFields]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[OrderTest.StoresBuyOrderFields]=]  PROPERTIES DEF_SOURCE_LINE /home/devshiv/projects/limit-order-book/tests/test_order.cpp:6 WORKING_DIRECTORY /home/devshiv/projects/limit-order-book/build-release SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[OrderTest.StoresSellOrderFields]=]  /home/devshiv/projects/limit-order-book/build-release/test_order [==[--gtest_filter=OrderTest.StoresSellOrderFields]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[OrderTest.StoresSellOrderFields]=]  PROPERTIES DEF_SOURCE_LINE /home/devshiv/projects/limit-order-book/tests/test_order.cpp:20 WORKING_DIRECTORY /home/devshiv/projects/limit-order-book/build-release SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_order_TESTS OrderTest.StoresBuyOrderFields OrderTest.StoresSellOrderFields)
