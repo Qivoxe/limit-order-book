@@ -1,0 +1,32 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "InvariantTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "PartialFillUpdatesRemainingQuantity",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_invariants.cpp",
+          "line": 6
+        },
+        {
+          "name": "CancellationUpdatesAggregateQuantity",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_invariants.cpp",
+          "line": 20
+        },
+        {
+          "name": "EmptyPriceLevelIsRemoved",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_invariants.cpp",
+          "line": 33
+        },
+        {
+          "name": "FullyFilledOrderIdCanBeReused",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_invariants.cpp",
+          "line": 43
+        }
+      ]
+    }
+  ]
+}

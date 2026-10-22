@@ -1,0 +1,42 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "MatchingTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "ExecutesCrossingOrders",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 6
+        },
+        {
+          "name": "SupportsPartialFill",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 23
+        },
+        {
+          "name": "PreservesPricePriority",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 39
+        },
+        {
+          "name": "DoesNotMatchNonCrossingOrders",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 54
+        },
+        {
+          "name": "PreservesFifoAtSamePrice",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 67
+        },
+        {
+          "name": "MatchesMultipleRestingOrders",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 81
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "CancellationTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "CancelsBuyOrder",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_cancellation.cpp",
+          "line": 6
+        },
+        {
+          "name": "CancelsBestAskAndRevealsNext",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_cancellation.cpp",
+          "line": 17
+        },
+        {
+          "name": "RejectsUnknownOrderId",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_cancellation.cpp",
+          "line": 31
+        },
+        {
+          "name": "CancelsOneOfTwoOrdersAtSamePrice",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_cancellation.cpp",
+          "line": 38
+        }
+      ]
+    }
+  ]
+}

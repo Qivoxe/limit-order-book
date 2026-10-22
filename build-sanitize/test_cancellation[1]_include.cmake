@@ -1,0 +1,5 @@
+if(EXISTS "/home/devshiv/projects/limit-order-book/build-sanitize/test_cancellation[1]_tests.cmake")
+  include("/home/devshiv/projects/limit-order-book/build-sanitize/test_cancellation[1]_tests.cmake")
+else()
+  add_test(test_cancellation_NOT_BUILT test_cancellation_NOT_BUILT)
+endif()

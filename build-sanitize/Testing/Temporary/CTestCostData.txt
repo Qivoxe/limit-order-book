@@ -1,0 +1,21 @@
+OrderTest.StoresBuyOrderFields 1 0.0245856
+OrderTest.StoresSellOrderFields 1 0.0428394
+OrderBookTest.StartsEmpty 1 0.0297231
+OrderBookTest.FindsBestBidAndAsk 1 0.0215726
+OrderBookTest.RejectsDuplicateOrderIds 1 0.0398958
+OrderBookTest.RejectsInvalidOrders 1 0.0277825
+MatchingTest.ExecutesCrossingOrders 1 0.0501676
+MatchingTest.SupportsPartialFill 1 0.0298461
+MatchingTest.PreservesPricePriority 1 0.0230969
+MatchingTest.DoesNotMatchNonCrossingOrders 1 0.0300368
+MatchingTest.PreservesFifoAtSamePrice 1 0.0308036
+MatchingTest.MatchesMultipleRestingOrders 1 0.0604875
+CancellationTest.CancelsBuyOrder 1 0.0445449
+CancellationTest.CancelsBestAskAndRevealsNext 1 0.117913
+CancellationTest.RejectsUnknownOrderId 1 0.600595
+CancellationTest.CancelsOneOfTwoOrdersAtSamePrice 1 0.145669
+InvariantTest.PartialFillUpdatesRemainingQuantity 1 0.115039
+InvariantTest.CancellationUpdatesAggregateQuantity 1 0.0793726
+InvariantTest.EmptyPriceLevelIsRemoved 1 0.298255
+InvariantTest.FullyFilledOrderIdCanBeReused 1 0.106935
+---

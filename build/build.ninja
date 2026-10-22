@@ -36,13 +36,46 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/devshiv/projects/limit-order-book/build/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target lob
+
+
+#############################################
+# Order-only phony target for lob
+
+build cmake_object_order_depends_target_lob: phony || .
+
+build CMakeFiles/lob.dir/src/order_book.cpp.o: CXX_COMPILER__lob_unscanned_ /home/devshiv/projects/limit-order-book/src/order_book.cpp || cmake_object_order_depends_target_lob
+  DEP_FILE = CMakeFiles/lob.dir/src/order_book.cpp.o.d
+  FLAGS = -std=c++20
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/lob.dir
+  OBJECT_FILE_DIR = CMakeFiles/lob.dir/src
+  TARGET_SUPPORT_DIR = CMakeFiles/lob.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target lob
+
+
+#############################################
+# Link the static library liblob.a
+
+build liblob.a: CXX_STATIC_LIBRARY_LINKER__lob_ CMakeFiles/lob.dir/src/order_book.cpp.o
+  OBJECT_DIR = CMakeFiles/lob.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = liblob.a
+  TARGET_PDB = lob.a.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/lob.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target lob_engine
 
 
 #############################################
 # Order-only phony target for lob_engine
 
-build cmake_object_order_depends_target_lob_engine: phony || .
+build cmake_object_order_depends_target_lob_engine: phony || cmake_object_order_depends_target_lob
 
 build CMakeFiles/lob_engine.dir/src/main.cpp.o: CXX_COMPILER__lob_engine_unscanned_ /home/devshiv/projects/limit-order-book/src/main.cpp || cmake_object_order_depends_target_lob_engine
   DEP_FILE = CMakeFiles/lob_engine.dir/src/main.cpp.o.d
@@ -60,9 +93,10 @@ build CMakeFiles/lob_engine.dir/src/main.cpp.o: CXX_COMPILER__lob_engine_unscann
 #############################################
 # Link the executable lob_engine
 
-build lob_engine: CXX_EXECUTABLE_LINKER__lob_engine_ CMakeFiles/lob_engine.dir/src/main.cpp.o
+build lob_engine: CXX_EXECUTABLE_LINKER__lob_engine_ CMakeFiles/lob_engine.dir/src/main.cpp.o | liblob.a || liblob.a
   DEP_FILE = CMakeFiles/lob_engine.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/lob_engine.dir/link.d
+  LINK_LIBRARIES = liblob.a
   OBJECT_DIR = CMakeFiles/lob_engine.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -77,7 +111,7 @@ build lob_engine: CXX_EXECUTABLE_LINKER__lob_engine_ CMakeFiles/lob_engine.dir/s
 #############################################
 # Order-only phony target for test_order
 
-build cmake_object_order_depends_target_test_order: phony || .
+build cmake_object_order_depends_target_test_order: phony || cmake_object_order_depends_target_lob
 
 build CMakeFiles/test_order.dir/tests/test_order.cpp.o: CXX_COMPILER__test_order_unscanned_ /home/devshiv/projects/limit-order-book/tests/test_order.cpp || cmake_object_order_depends_target_test_order
   DEP_FILE = CMakeFiles/test_order.dir/tests/test_order.cpp.o.d
@@ -95,10 +129,10 @@ build CMakeFiles/test_order.dir/tests/test_order.cpp.o: CXX_COMPILER__test_order
 #############################################
 # Link the executable test_order
 
-build test_order test_order[1]_tests.cmake | ${cmake_ninja_workdir}test_order[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_order_ CMakeFiles/test_order.dir/tests/test_order.cpp.o | /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a
+build test_order test_order[1]_tests.cmake | ${cmake_ninja_workdir}test_order[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_order_ CMakeFiles/test_order.dir/tests/test_order.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   DEP_FILE = CMakeFiles/test_order.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_order.dir/link.d
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_order.dir
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build && /usr/bin/cmake -D TEST_TARGET=test_order -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build/test_order -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build/test_order[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
@@ -106,6 +140,154 @@ build test_order test_order[1]_tests.cmake | ${cmake_ninja_workdir}test_order[1]
   TARGET_FILE = test_order
   TARGET_PDB = test_order.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_order.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_order_book
+
+
+#############################################
+# Order-only phony target for test_order_book
+
+build cmake_object_order_depends_target_test_order_book: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o: CXX_COMPILER__test_order_book_unscanned_ /home/devshiv/projects/limit-order-book/tests/test_order_book.cpp || cmake_object_order_depends_target_test_order_book
+  DEP_FILE = CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o.d
+  FLAGS = -std=c++20 -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/test_order_book.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_order_book.dir/tests
+  TARGET_SUPPORT_DIR = CMakeFiles/test_order_book.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_order_book
+
+
+#############################################
+# Link the executable test_order_book
+
+build test_order_book test_order_book[1]_tests.cmake | ${cmake_ninja_workdir}test_order_book[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_order_book_ CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+  DEP_FILE = CMakeFiles/test_order_book.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_order_book.dir/link.d
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = CMakeFiles/test_order_book.dir
+  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build && /usr/bin/cmake -D TEST_TARGET=test_order_book -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build/test_order_book -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_book_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build/test_order_book[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test_order_book
+  TARGET_PDB = test_order_book.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/test_order_book.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_matching
+
+
+#############################################
+# Order-only phony target for test_matching
+
+build cmake_object_order_depends_target_test_matching: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/test_matching.dir/tests/test_matching.cpp.o: CXX_COMPILER__test_matching_unscanned_ /home/devshiv/projects/limit-order-book/tests/test_matching.cpp || cmake_object_order_depends_target_test_matching
+  DEP_FILE = CMakeFiles/test_matching.dir/tests/test_matching.cpp.o.d
+  FLAGS = -std=c++20 -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/test_matching.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_matching.dir/tests
+  TARGET_SUPPORT_DIR = CMakeFiles/test_matching.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_matching
+
+
+#############################################
+# Link the executable test_matching
+
+build test_matching test_matching[1]_tests.cmake | ${cmake_ninja_workdir}test_matching[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_matching_ CMakeFiles/test_matching.dir/tests/test_matching.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+  DEP_FILE = CMakeFiles/test_matching.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_matching.dir/link.d
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = CMakeFiles/test_matching.dir
+  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build && /usr/bin/cmake -D TEST_TARGET=test_matching -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build/test_matching -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_matching_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build/test_matching[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test_matching
+  TARGET_PDB = test_matching.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/test_matching.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_cancellation
+
+
+#############################################
+# Order-only phony target for test_cancellation
+
+build cmake_object_order_depends_target_test_cancellation: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o: CXX_COMPILER__test_cancellation_unscanned_ /home/devshiv/projects/limit-order-book/tests/test_cancellation.cpp || cmake_object_order_depends_target_test_cancellation
+  DEP_FILE = CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o.d
+  FLAGS = -std=c++20 -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/test_cancellation.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_cancellation.dir/tests
+  TARGET_SUPPORT_DIR = CMakeFiles/test_cancellation.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_cancellation
+
+
+#############################################
+# Link the executable test_cancellation
+
+build test_cancellation test_cancellation[1]_tests.cmake | ${cmake_ninja_workdir}test_cancellation[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_cancellation_ CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+  DEP_FILE = CMakeFiles/test_cancellation.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_cancellation.dir/link.d
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = CMakeFiles/test_cancellation.dir
+  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build && /usr/bin/cmake -D TEST_TARGET=test_cancellation -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build/test_cancellation -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_cancellation_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build/test_cancellation[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test_cancellation
+  TARGET_PDB = test_cancellation.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/test_cancellation.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_invariants
+
+
+#############################################
+# Order-only phony target for test_invariants
+
+build cmake_object_order_depends_target_test_invariants: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o: CXX_COMPILER__test_invariants_unscanned_ /home/devshiv/projects/limit-order-book/tests/test_invariants.cpp || cmake_object_order_depends_target_test_invariants
+  DEP_FILE = CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o.d
+  FLAGS = -std=c++20 -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/test_invariants.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_invariants.dir/tests
+  TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_invariants
+
+
+#############################################
+# Link the executable test_invariants
+
+build test_invariants test_invariants[1]_tests.cmake | ${cmake_ninja_workdir}test_invariants[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_invariants_ CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+  DEP_FILE = CMakeFiles/test_invariants.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_invariants.dir/link.d
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = CMakeFiles/test_invariants.dir
+  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build && /usr/bin/cmake -D TEST_TARGET=test_invariants -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build/test_invariants -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_invariants_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build/test_invariants[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test_invariants
+  TARGET_PDB = test_invariants.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
 
 
 #############################################
@@ -145,6 +327,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build lob: phony liblob.a
+
 # =============================================================================
 # Folder targets.
 
@@ -153,7 +337,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/devshiv/projects/limit-order-book/build
 
-build all: phony lob_engine test_order
+build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants
 
 # =============================================================================
 # Built-in targets
