@@ -316,6 +316,46 @@ build test_invariants test_invariants[1]_tests.cmake | ${cmake_ninja_workdir}tes
   TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
 
 # =============================================================================
+# Object build statements for EXECUTABLE target test_exchange_simulator
+
+
+#############################################
+# Order-only phony target for test_exchange_simulator
+
+build cmake_object_order_depends_target_test_exchange_simulator: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o: CXX_COMPILER__test_exchange_simulator_unscanned_Release /home/devshiv/projects/limit-order-book/tests/test_exchange_simulator.cpp || cmake_object_order_depends_target_test_exchange_simulator
+  CONFIG = Release
+  DEP_FILE = CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++20 -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/test_exchange_simulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_exchange_simulator.dir/tests
+  TARGET_SUPPORT_DIR = CMakeFiles/test_exchange_simulator.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_exchange_simulator
+
+
+#############################################
+# Link the executable test_exchange_simulator
+
+build test_exchange_simulator test_exchange_simulator[1]_tests.cmake | ${cmake_ninja_workdir}test_exchange_simulator[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_exchange_simulator_Release CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+  CONFIG = Release
+  DEP_FILE = CMakeFiles/test_exchange_simulator.dir/link.d
+  FLAGS = -O3 -DNDEBUG
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_exchange_simulator.dir/link.d
+  LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = CMakeFiles/test_exchange_simulator.dir
+  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_exchange_simulator -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_exchange_simulator_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test_exchange_simulator
+  TARGET_PDB = test_exchange_simulator.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/test_exchange_simulator.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target lob_benchmark
 
 
@@ -441,7 +481,7 @@ build lob: phony liblob.a
 #############################################
 # Folder: /home/devshiv/projects/limit-order-book/build-release
 
-build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants lob_benchmark cancellation_benchmark
+build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants test_exchange_simulator lob_benchmark cancellation_benchmark
 
 # =============================================================================
 # Built-in targets

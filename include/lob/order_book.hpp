@@ -2,6 +2,7 @@
 #pragma once
 
 #include "lob/order.hpp"
+#include "lob/market_data.hpp"
 
 #include <cstddef>
 #include <deque>
@@ -14,14 +15,6 @@
 
 namespace lob
 {
-
-    struct Trade
-    {
-        OrderId buy_order_id;
-        OrderId sell_order_id;
-        Price price;
-        Quantity quantity;
-    };
 
     struct PriceLevel
     {
@@ -45,11 +38,20 @@ namespace lob
         using AskLevels =
             std::map<Price, PriceLevel, std::less<Price>>;
 
+        // IDs are unique while resting and reusable after full fill or cancel.
         bool add_order(const Order &order);
 
         std::vector<Trade> submit_order(Order order);
 
+        // Events are returned synchronously: trades in execution order, then
+        // changed levels ordered by side and price, then a quote change if any.
+        SubmissionResult submit_order_with_events(Order order);
+
         bool cancel_order(OrderId order_id);
+
+        CancellationResult cancel_order_with_events(OrderId order_id);
+
+        BookSnapshot depth_snapshot(std::size_t depth) const;
 
         std::optional<Price> best_bid() const;
         std::optional<Price> best_ask() const;

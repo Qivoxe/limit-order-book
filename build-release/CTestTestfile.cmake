@@ -9,3 +9,4 @@ include("/home/devshiv/projects/limit-order-book/build-release/test_order_book[1
 include("/home/devshiv/projects/limit-order-book/build-release/test_matching[1]_include.cmake")
 include("/home/devshiv/projects/limit-order-book/build-release/test_cancellation[1]_include.cmake")
 include("/home/devshiv/projects/limit-order-book/build-release/test_invariants[1]_include.cmake")
+include("/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator[1]_include.cmake")

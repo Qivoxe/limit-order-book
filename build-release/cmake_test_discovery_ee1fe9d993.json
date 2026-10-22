@@ -1,10 +1,10 @@
 {
-  "tests": 6,
+  "tests": 7,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "MatchingTest",
-      "tests": 6,
+      "tests": 7,
       "testsuite": [
         {
           "name": "ExecutesCrossingOrders",
@@ -35,6 +35,11 @@
           "name": "MatchesMultipleRestingOrders",
           "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
           "line": 81
+        },
+        {
+          "name": "ReportsExecutionOrderAcrossPriceLevelsAndFifo",
+          "file": "\/home\/devshiv\/projects\/limit-order-book\/tests\/test_matching.cpp",
+          "line": 98
         }
       ]
     }
