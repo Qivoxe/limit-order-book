@@ -289,6 +289,42 @@ build test_invariants test_invariants[1]_tests.cmake | ${cmake_ninja_workdir}tes
   TARGET_PDB = test_invariants.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
 
+# =============================================================================
+# Object build statements for EXECUTABLE target lob_benchmark
+
+
+#############################################
+# Order-only phony target for lob_benchmark
+
+build cmake_object_order_depends_target_lob_benchmark: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o: CXX_COMPILER__lob_benchmark_unscanned_ /home/devshiv/projects/limit-order-book/benchmarks/benchmark.cpp || cmake_object_order_depends_target_lob_benchmark
+  DEP_FILE = CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o.d
+  FLAGS = -std=c++20
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/lob_benchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles/lob_benchmark.dir/benchmarks
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_benchmark.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lob_benchmark
+
+
+#############################################
+# Link the executable lob_benchmark
+
+build lob_benchmark: CXX_EXECUTABLE_LINKER__lob_benchmark_ CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o | liblob.a || liblob.a
+  DEP_FILE = CMakeFiles/lob_benchmark.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/lob_benchmark.dir/link.d
+  LINK_LIBRARIES = liblob.a
+  OBJECT_DIR = CMakeFiles/lob_benchmark.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lob_benchmark
+  TARGET_PDB = lob_benchmark.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_benchmark.dir
+
 
 #############################################
 # Utility command for test
@@ -337,7 +373,7 @@ build lob: phony liblob.a
 #############################################
 # Folder: /home/devshiv/projects/limit-order-book/build
 
-build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants
+build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants lob_benchmark
 
 # =============================================================================
 # Built-in targets

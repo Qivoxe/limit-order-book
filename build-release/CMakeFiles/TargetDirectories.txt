@@ -6,6 +6,7 @@
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/test_cancellation.dir
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/test_invariants.dir
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/lob_benchmark.dir
+/home/devshiv/projects/limit-order-book/build-release/CMakeFiles/cancellation_benchmark.dir
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/test.dir
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/edit_cache.dir
 /home/devshiv/projects/limit-order-book/build-release/CMakeFiles/rebuild_cache.dir

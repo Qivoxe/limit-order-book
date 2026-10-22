@@ -56,8 +56,6 @@ build CMakeFiles/lob.dir/src/order_book.cpp.o: CXX_COMPILER__lob_unscanned_Debug
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/lob.dir
   OBJECT_FILE_DIR = CMakeFiles/lob.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/lob.dir/lob.pdb
-  TARGET_PDB = liblob.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/lob.dir
 
 
@@ -74,9 +72,8 @@ build liblob.a: CXX_STATIC_LIBRARY_LINKER__lob_Debug CMakeFiles/lob.dir/src/orde
   OBJECT_DIR = CMakeFiles/lob.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/lob.dir/lob.pdb
   TARGET_FILE = liblob.a
-  TARGET_PDB = liblob.pdb
+  TARGET_PDB = lob.a.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/lob.dir
 
 # =============================================================================
@@ -95,8 +92,6 @@ build CMakeFiles/lob_engine.dir/src/main.cpp.o: CXX_COMPILER__lob_engine_unscann
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/lob_engine.dir
   OBJECT_FILE_DIR = CMakeFiles/lob_engine.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/lob_engine.dir/
-  TARGET_PDB = lob_engine.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/lob_engine.dir
 
 
@@ -116,9 +111,8 @@ build lob_engine: CXX_EXECUTABLE_LINKER__lob_engine_Debug CMakeFiles/lob_engine.
   OBJECT_DIR = CMakeFiles/lob_engine.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/lob_engine.dir/
   TARGET_FILE = lob_engine
-  TARGET_PDB = lob_engine.pdb
+  TARGET_PDB = lob_engine.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/lob_engine.dir
 
 # =============================================================================
@@ -137,8 +131,6 @@ build CMakeFiles/test_order.dir/tests/test_order.cpp.o: CXX_COMPILER__test_order
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/test_order.dir
   OBJECT_FILE_DIR = CMakeFiles/test_order.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/test_order.dir/
-  TARGET_PDB = test_order.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/test_order.dir
 
 
@@ -159,9 +151,8 @@ build test_order test_order[1]_tests.cmake | ${cmake_ninja_workdir}test_order[1]
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-sanitize && /usr/bin/cmake -D TEST_TARGET=test_order -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-sanitize/test_order -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-sanitize -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-sanitize/test_order[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles/test_order.dir/
   TARGET_FILE = test_order
-  TARGET_PDB = test_order.pdb
+  TARGET_PDB = test_order.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_order.dir
 
 # =============================================================================
@@ -180,8 +171,6 @@ build CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o: CXX_COMPILER__
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/test_order_book.dir
   OBJECT_FILE_DIR = CMakeFiles/test_order_book.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/test_order_book.dir/
-  TARGET_PDB = test_order_book.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/test_order_book.dir
 
 
@@ -202,9 +191,8 @@ build test_order_book test_order_book[1]_tests.cmake | ${cmake_ninja_workdir}tes
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-sanitize && /usr/bin/cmake -D TEST_TARGET=test_order_book -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-sanitize/test_order_book -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-sanitize -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_book_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-sanitize/test_order_book[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles/test_order_book.dir/
   TARGET_FILE = test_order_book
-  TARGET_PDB = test_order_book.pdb
+  TARGET_PDB = test_order_book.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_order_book.dir
 
 # =============================================================================
@@ -223,8 +211,6 @@ build CMakeFiles/test_matching.dir/tests/test_matching.cpp.o: CXX_COMPILER__test
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/test_matching.dir
   OBJECT_FILE_DIR = CMakeFiles/test_matching.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/test_matching.dir/
-  TARGET_PDB = test_matching.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/test_matching.dir
 
 
@@ -245,9 +231,8 @@ build test_matching test_matching[1]_tests.cmake | ${cmake_ninja_workdir}test_ma
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-sanitize && /usr/bin/cmake -D TEST_TARGET=test_matching -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-sanitize/test_matching -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-sanitize -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_matching_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-sanitize/test_matching[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles/test_matching.dir/
   TARGET_FILE = test_matching
-  TARGET_PDB = test_matching.pdb
+  TARGET_PDB = test_matching.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_matching.dir
 
 # =============================================================================
@@ -266,8 +251,6 @@ build CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o: CXX_COMPIL
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/test_cancellation.dir
   OBJECT_FILE_DIR = CMakeFiles/test_cancellation.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/test_cancellation.dir/
-  TARGET_PDB = test_cancellation.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/test_cancellation.dir
 
 
@@ -288,9 +271,8 @@ build test_cancellation test_cancellation[1]_tests.cmake | ${cmake_ninja_workdir
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-sanitize && /usr/bin/cmake -D TEST_TARGET=test_cancellation -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-sanitize/test_cancellation -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-sanitize -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_cancellation_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-sanitize/test_cancellation[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles/test_cancellation.dir/
   TARGET_FILE = test_cancellation
-  TARGET_PDB = test_cancellation.pdb
+  TARGET_PDB = test_cancellation.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_cancellation.dir
 
 # =============================================================================
@@ -309,8 +291,6 @@ build CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o: CXX_COMPILER__
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/test_invariants.dir
   OBJECT_FILE_DIR = CMakeFiles/test_invariants.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/test_invariants.dir/
-  TARGET_PDB = test_invariants.pdb
   TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
 
 
@@ -331,10 +311,48 @@ build test_invariants test_invariants[1]_tests.cmake | ${cmake_ninja_workdir}tes
   POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-sanitize && /usr/bin/cmake -D TEST_TARGET=test_invariants -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-sanitize/test_invariants -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-sanitize -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_invariants_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-sanitize/test_invariants[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles/test_invariants.dir/
   TARGET_FILE = test_invariants
-  TARGET_PDB = test_invariants.pdb
+  TARGET_PDB = test_invariants.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target lob_benchmark
+
+
+#############################################
+# Order-only phony target for lob_benchmark
+
+build cmake_object_order_depends_target_lob_benchmark: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o: CXX_COMPILER__lob_benchmark_unscanned_Debug /home/devshiv/projects/limit-order-book/benchmarks/benchmark.cpp || cmake_object_order_depends_target_lob_benchmark
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o.d
+  FLAGS = -fsanitize=address,undefined -fno-omit-frame-pointer -g -std=c++20
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/lob_benchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles/lob_benchmark.dir/benchmarks
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_benchmark.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lob_benchmark
+
+
+#############################################
+# Link the executable lob_benchmark
+
+build lob_benchmark: CXX_EXECUTABLE_LINKER__lob_benchmark_Debug CMakeFiles/lob_benchmark.dir/benchmarks/benchmark.cpp.o | liblob.a || liblob.a
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/lob_benchmark.dir/link.d
+  FLAGS = -fsanitize=address,undefined -fno-omit-frame-pointer -g
+  LINK_FLAGS = -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/lob_benchmark.dir/link.d
+  LINK_LIBRARIES = liblob.a
+  OBJECT_DIR = CMakeFiles/lob_benchmark.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lob_benchmark
+  TARGET_PDB = lob_benchmark.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_benchmark.dir
 
 
 #############################################
@@ -384,7 +402,7 @@ build lob: phony liblob.a
 #############################################
 # Folder: /home/devshiv/projects/limit-order-book/build-sanitize
 
-build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants
+build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants lob_benchmark
 
 # =============================================================================
 # Built-in targets
@@ -393,14 +411,14 @@ build all: phony liblob.a lob_engine test_order test_order_book test_matching te
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /home/devshiv/projects/limit-order-book/build-sanitize/cmake_install.cmake /home/devshiv/projects/limit-order-book/build-sanitize/CTestTestfile.cmake: RERUN_CMAKE | /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerSupport.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-4.2/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-4.2/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-4.2/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-4.2/Modules/CMakeSystem.cmake.in /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-4.2/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-CXXImportStd.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-4.2/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeInspectCXXLinker.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
+build build.ninja /home/devshiv/projects/limit-order-book/build-sanitize/cmake_install.cmake /home/devshiv/projects/limit-order-book/build-sanitize/CTestTestfile.cmake: RERUN_CMAKE | /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineCompilerSupport.cmake /usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-4.2/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-4.2/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-4.2/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-4.2/Modules/CMakeSystem.cmake.in /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-4.2/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-4.2/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Diab-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-CXXImportStd.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-4.2/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Renesas-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/TIClang-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeInspectCXXLinker.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
+build /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
 
 
 #############################################
