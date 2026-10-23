@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import subprocess
 import sys
 import unittest
 
@@ -160,6 +161,18 @@ class EngineClientTests(unittest.TestCase):
 
 
 class StreamlitChartRegressionTests(unittest.TestCase):
+    def test_app_imports_when_launched_from_outside_repository_root(self) -> None:
+        dashboard_dir = os.path.join(ROOT, "dashboard")
+        import_command = (
+            "import importlib.util, sys; "
+            f"sys.path.insert(0, {dashboard_dir!r}); "
+            f"spec=importlib.util.spec_from_file_location('cloud_app', {os.path.join(dashboard_dir, 'app.py')!r}); "
+            "module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)"
+        )
+        result = subprocess.run([sys.executable, "-c", import_command], cwd="/tmp",
+                                capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     @unittest.skipUnless(os.path.isfile(ADAPTER), "build lob_protocol for the app integration test")
     def test_example_scenario_renders_nonempty_depth_chart(self) -> None:
         from streamlit.testing.v1 import AppTest
