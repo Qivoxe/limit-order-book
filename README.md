@@ -1,6 +1,22 @@
-# C++ Limit Order Book
+# LOB Terminal — C++20 Limit Order Book
 
-A C++20 limit order book simulator for studying exchange matching, price-time priority, and the engineering tradeoffs behind order-book data structures. It is an educational and research project; it is not a production exchange or a claim of production HFT performance.
+**Live dashboard:** [Open LOB Terminal](https://qivoxe-limit-order-book-dashboardapp-kpcjuq.streamlit.app/)
+
+A low-latency systems research project exploring exchange matching mechanics, price-time priority, indexed cancellation, market-data events, and measurement discipline. The matching engine is implemented in C++20; the Streamlit dashboard is a visualization and control surface over the real C++ process, not a second Python matcher.
+
+> **Scope:** This is an educational and research portfolio project—not a production exchange, execution venue, or guarantee of production HFT performance. Benchmark results are synthetic and machine-dependent.
+
+| Area | Implementation |
+|---|---|
+| Matching | Price-time priority, FIFO at each price, resting-order price execution, partial and full fills |
+| Book structure | Ordered bid/ask price maps, per-level FIFO lists, aggregate quantities, order-ID location index |
+| Market data | Owned depth snapshots and synchronous typed trade, level, and quote events |
+| Dashboard | Streamlit + Plotly, backed by a persistent local C++ adapter process |
+| Toolchain | C++20, CMake, Ninja, GoogleTest; Python dashboard tests |
+
+## Performance snapshot
+
+Five synthetic Release runs on GCC 15.2.0 / an Intel Core i3-1305U / WSL2 reported median throughput of **13.36M single-price submissions/s** and **112.4M best/level queries/s**. Across those runs, median single-submit latency percentiles were **66 ns p50**, **137 ns p99**, and **290 ns p99.9**. These are local observations—not service-level objectives or portable performance claims. Workload definitions, observed ranges, and measurement caveats are documented in [Benchmarks](#benchmarks).
 
 ## What it demonstrates
 
