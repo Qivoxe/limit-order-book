@@ -27,6 +27,7 @@ from dashboard.views import ladder_table
 PROTOCOL_EXE = Path(os.environ.get("LOB_PROTOCOL_EXECUTABLE", ROOT / "build-release" / "lob_protocol"))
 BENCHMARK_EXE = ROOT / "build-release" / "lob_benchmark"
 CANCELLATION_EXE = ROOT / "build-release" / "cancellation_benchmark"
+DASHBOARD_BUILD_DIR = Path(os.environ.get("LOB_DASHBOARD_BUILD_DIR", ROOT / "build-dashboard")).resolve()
 MAX_HISTORY = 200
 
 SCENARIO = [
@@ -70,6 +71,38 @@ def set_flash(kind: str, message: str) -> None:
     st.session_state.flash = (kind, message)
 
 
+def build_release_targets(targets: list[str]) -> None:
+    global PROTOCOL_EXE, BENCHMARK_EXE, CANCELLATION_EXE
+
+    configure = [
+        "cmake", "-S", str(ROOT), "-B", str(DASHBOARD_BUILD_DIR), "-G", "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_TESTING=OFF", "-DLOB_BUILD_DEMO=OFF",
+        "-DLOB_BUILD_PROTOCOL=ON", "-DLOB_BUILD_BENCHMARKS=ON",
+    ]
+    build = ["cmake", "--build", str(DASHBOARD_BUILD_DIR), "--target", *targets, "--parallel", "2"]
+    for label, command, timeout in (("CMake configure", configure, 180), ("C++ build", build, 300)):
+        try:
+            result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True,
+                                    errors="replace", timeout=timeout, check=False)
+        except (OSError, subprocess.TimeoutExpired) as error:
+            raise RuntimeError(f"{label} failed: {error}") from error
+        if result.returncode != 0:
+            detail = (result.stderr + "\n" + result.stdout).strip()[-4000:]
+            raise RuntimeError(f"{label} failed (exit {result.returncode}).\n{detail}")
+
+    PROTOCOL_EXE = DASHBOARD_BUILD_DIR / "lob_protocol"
+    BENCHMARK_EXE = DASHBOARD_BUILD_DIR / "lob_benchmark"
+    CANCELLATION_EXE = DASHBOARD_BUILD_DIR / "cancellation_benchmark"
+    target_paths = {
+        "lob_protocol": PROTOCOL_EXE,
+        "lob_benchmark": BENCHMARK_EXE,
+        "cancellation_benchmark": CANCELLATION_EXE,
+    }
+    missing = [str(target_paths[target]) for target in targets if not target_paths[target].is_file()]
+    if missing:
+        raise RuntimeError("C++ build completed without expected executable(s): " + ", ".join(missing))
+
+
 def record_response(response: EngineResponse, command: str) -> None:
     st.session_state.last_command = command
     if response.status == "ERROR":
@@ -99,7 +132,8 @@ def start_or_reset_engine() -> None:
             response = client.reset()
         else:
             if not PROTOCOL_EXE.is_file():
-                raise EngineProcessError(f"Engine adapter not found: {PROTOCOL_EXE}. Build the Release target first.")
+                with st.spinner("Building the C++ engine adapter (first launch only)..."):
+                    build_release_targets(["lob_protocol"])
             client = EngineClient(PROTOCOL_EXE)
             st.session_state.engine_client = client
             response = client.reset()
@@ -116,7 +150,7 @@ def start_or_reset_engine() -> None:
         st.session_state.benchmark_runs = []
         st.session_state.benchmark_error = None
         set_flash("success", "Engine reset. The book is empty and ready for orders.")
-    except (EngineProcessError, OSError) as error:
+    except (EngineProcessError, OSError, RuntimeError) as error:
         st.session_state.engine_error = str(error)
         set_flash("error", str(error))
 
@@ -169,11 +203,12 @@ def snapshot_now() -> EngineResponse | None:
 
 def run_benchmarks() -> None:
     if not BENCHMARK_EXE.is_file() or not CANCELLATION_EXE.is_file():
-        st.session_state.benchmark_error = (
-            "Release benchmarks are missing. Build them with "
-            "`cmake --build build-release --target lob_benchmark cancellation_benchmark`."
-        )
-        return
+        try:
+            with st.spinner("Building the Release benchmark executables..."):
+                build_release_targets(["lob_benchmark", "cancellation_benchmark"])
+        except RuntimeError as error:
+            st.session_state.benchmark_error = str(error)
+            return
     try:
         workload = subprocess.run([str(BENCHMARK_EXE)], cwd=ROOT, capture_output=True,
                                   text=True, errors="replace", timeout=120, check=False)

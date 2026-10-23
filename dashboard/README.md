@@ -39,6 +39,12 @@ python -m streamlit run dashboard/app.py
 
 Open the local URL printed by Streamlit. Use **Start / Reset Engine** to start the C++ process. Submit integer-tick orders in **Order Entry & Tape**, or load the deterministic scenario in the sidebar. The **Run Release Benchmarks** button explicitly runs the existing Release executables; it is not invoked on ordinary Streamlit reruns.
 
+## Streamlit Community Cloud
+
+The repository root `packages.txt` installs the C++ compiler and Ninja. `dashboard/requirements.txt` supplies CMake. When no prebuilt adapter exists, the first **Start / Reset Engine** click configures and builds only the requested C++ target into the ignored `build-dashboard/` directory; this avoids committing a platform-specific binary or modifying `build-release/`. Benchmark executables are built only after clicking **Run Release Benchmarks**. Cloud instances are ephemeral, so a fresh deployment may need to build these targets again.
+
+Deploy `dashboard/app.py` as the app entrypoint. Community Cloud expects external apt dependencies in a root-level `packages.txt` and supports a requirements file beside the app entrypoint. See the [Streamlit Community Cloud dependency guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies).
+
 ## Local protocol
 
 The adapter uses a versioned, line-oriented tab-delimited protocol to avoid adding a JSON dependency. Startup writes `READY<TAB>1`. Requests are `SUBMIT id BUY|SELL price quantity`, `CANCEL id`, `SNAPSHOT`, `RESET`, or `EXIT`. Each response is framed by `BEGIN<TAB>1<TAB>status<TAB>operation`, zero or more typed records (`TRADE`, `EVENT_TRADE`, `EVENT_LEVEL`, `EVENT_QUOTE`, `QUOTE`, `COUNT`, `LEVEL`), and `END`. Rejections and malformed requests are distinct statuses with a reason token; diagnostics are kept off stdout. Integer fields are parsed strictly before the C++ API is called.

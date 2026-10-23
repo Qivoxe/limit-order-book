@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import subprocess
 import sys
+import tempfile
 import unittest
 
 from dashboard.benchmark_data import parse_benchmark_outputs
@@ -21,7 +22,6 @@ from dashboard.engine_client import EngineClient, EngineProcessError
 from dashboard.views import ladder_table
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ADAPTER = os.environ.get("LOB_PROTOCOL_EXECUTABLE", os.path.join(ROOT, "build-release", "lob_protocol"))
 
 
 class ProtocolTests(unittest.TestCase):
@@ -173,20 +173,34 @@ class StreamlitChartRegressionTests(unittest.TestCase):
                                 capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, 0, result.stderr)
 
-    @unittest.skipUnless(os.path.isfile(ADAPTER), "build lob_protocol for the app integration test")
-    def test_example_scenario_renders_nonempty_depth_chart(self) -> None:
+    def test_missing_adapter_builds_and_example_scenario_renders(self) -> None:
         from streamlit.testing.v1 import AppTest
 
-        app = AppTest.from_file(os.path.join(ROOT, "dashboard", "app.py"), default_timeout=20).run()
-        next(button for button in app.button if button.label == "Load Example Scenario").click().run()
-        next(button for button in app.button if button.label == "Run All").click().run()
-        try:
-            self.assertEqual(list(app.exception), [])
-            self.assertGreater(len(app.get("plotly_chart")), 0)
-        finally:
-            client = app.session_state["engine_client"]
-            if client is not None:
-                client.close()
+        previous_protocol = os.environ.get("LOB_PROTOCOL_EXECUTABLE")
+        previous_build_dir = os.environ.get("LOB_DASHBOARD_BUILD_DIR")
+        with tempfile.TemporaryDirectory(prefix="lob-dashboard-build-") as build_dir:
+            os.environ["LOB_PROTOCOL_EXECUTABLE"] = os.path.join(build_dir, "not-built-yet")
+            os.environ["LOB_DASHBOARD_BUILD_DIR"] = build_dir
+            app = AppTest.from_file(os.path.join(ROOT, "dashboard", "app.py"), default_timeout=60).run()
+            try:
+                next(button for button in app.button if button.label == "Start / Reset Engine").click().run()
+                self.assertTrue(app.session_state["engine_client"].alive)
+                next(button for button in app.button if button.label == "Load Example Scenario").click().run()
+                next(button for button in app.button if button.label == "Run All").click().run()
+                self.assertEqual(list(app.exception), [])
+                self.assertGreater(len(app.get("plotly_chart")), 0)
+            finally:
+                client = app.session_state["engine_client"]
+                if client is not None:
+                    client.close()
+                if previous_protocol is None:
+                    os.environ.pop("LOB_PROTOCOL_EXECUTABLE", None)
+                else:
+                    os.environ["LOB_PROTOCOL_EXECUTABLE"] = previous_protocol
+                if previous_build_dir is None:
+                    os.environ.pop("LOB_DASHBOARD_BUILD_DIR", None)
+                else:
+                    os.environ["LOB_DASHBOARD_BUILD_DIR"] = previous_build_dir
 
 
 if __name__ == "__main__":
