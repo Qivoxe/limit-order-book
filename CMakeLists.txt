@@ -11,6 +11,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(LOB_ENABLE_WARNINGS "Enable common compiler warnings" ON)
 option(LOB_BUILD_DEMO "Build the exchange simulator demonstration" ON)
+option(LOB_BUILD_PROTOCOL "Build the dashboard command adapter" ON)
 option(LOB_BUILD_BENCHMARKS "Build synthetic benchmark programs" ON)
 
 include(CTest)
@@ -29,6 +30,12 @@ endif()
 if(LOB_BUILD_DEMO)
     add_executable(lob_engine src/main.cpp)
     target_link_libraries(lob_engine PRIVATE lob)
+
+endif()
+
+if(LOB_BUILD_PROTOCOL)
+    add_executable(lob_protocol src/protocol_main.cpp)
+    target_link_libraries(lob_protocol PRIVATE lob)
 endif()
 
 if(BUILD_TESTING)

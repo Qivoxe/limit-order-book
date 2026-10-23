@@ -1,10 +1,10 @@
-Start testing: Oct 22 19:05 UTC
+Start testing: Oct 23 03:14 UTC
 ----------------------------------------------------------
 1/28 Testing: OrderTest.StoresBuyOrderFields
 1/28 Test: OrderTest.StoresBuyOrderFields
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order" "--gtest_filter=OrderTest.StoresBuyOrderFields" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderTest.StoresBuyOrderFields" start time: Oct 22 19:05 UTC
+"OrderTest.StoresBuyOrderFields" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -20,10 +20,10 @@ Note: Google Test filter = OrderTest.StoresBuyOrderFields
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderTest.StoresBuyOrderFields" end time: Oct 22 19:05 UTC
+"OrderTest.StoresBuyOrderFields" end time: Oct 23 03:14 UTC
 "OrderTest.StoresBuyOrderFields" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/28 Test: OrderTest.StoresSellOrderFields
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order" "--gtest_filter=OrderTest.StoresSellOrderFields" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderTest.StoresSellOrderFields" start time: Oct 22 19:05 UTC
+"OrderTest.StoresSellOrderFields" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -47,10 +47,10 @@ Note: Google Test filter = OrderTest.StoresSellOrderFields
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderTest.StoresSellOrderFields" end time: Oct 22 19:05 UTC
+"OrderTest.StoresSellOrderFields" end time: Oct 23 03:14 UTC
 "OrderTest.StoresSellOrderFields" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/28 Test: OrderBookTest.StartsEmpty
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order_book" "--gtest_filter=OrderBookTest.StartsEmpty" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderBookTest.StartsEmpty" start time: Oct 22 19:05 UTC
+"OrderBookTest.StartsEmpty" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -77,7 +77,7 @@ Note: Google Test filter = OrderBookTest.StartsEmpty
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.StartsEmpty" end time: Oct 22 19:05 UTC
+"OrderBookTest.StartsEmpty" end time: Oct 23 03:14 UTC
 "OrderBookTest.StartsEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/28 Test: OrderBookTest.FindsBestBidAndAsk
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order_book" "--gtest_filter=OrderBookTest.FindsBestBidAndAsk" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderBookTest.FindsBestBidAndAsk" start time: Oct 22 19:05 UTC
+"OrderBookTest.FindsBestBidAndAsk" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -98,13 +98,13 @@ Note: Google Test filter = OrderBookTest.FindsBestBidAndAsk
 [----------] 1 test from OrderBookTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.FindsBestBidAndAsk" end time: Oct 22 19:05 UTC
+"OrderBookTest.FindsBestBidAndAsk" end time: Oct 23 03:14 UTC
 "OrderBookTest.FindsBestBidAndAsk" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/28 Test: OrderBookTest.RejectsDuplicateOrderIds
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order_book" "--gtest_filter=OrderBookTest.RejectsDuplicateOrderIds" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderBookTest.RejectsDuplicateOrderIds" start time: Oct 22 19:05 UTC
+"OrderBookTest.RejectsDuplicateOrderIds" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -131,7 +131,7 @@ Note: Google Test filter = OrderBookTest.RejectsDuplicateOrderIds
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.RejectsDuplicateOrderIds" end time: Oct 22 19:05 UTC
+"OrderBookTest.RejectsDuplicateOrderIds" end time: Oct 23 03:14 UTC
 "OrderBookTest.RejectsDuplicateOrderIds" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,7 +139,7 @@ Test Passed.
 6/28 Test: OrderBookTest.RejectsInvalidOrders
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_order_book" "--gtest_filter=OrderBookTest.RejectsInvalidOrders" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"OrderBookTest.RejectsInvalidOrders" start time: Oct 22 19:05 UTC
+"OrderBookTest.RejectsInvalidOrders" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -158,7 +158,7 @@ Note: Google Test filter = OrderBookTest.RejectsInvalidOrders
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.RejectsInvalidOrders" end time: Oct 22 19:05 UTC
+"OrderBookTest.RejectsInvalidOrders" end time: Oct 23 03:14 UTC
 "OrderBookTest.RejectsInvalidOrders" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -166,7 +166,7 @@ Test Passed.
 7/28 Test: MatchingTest.ExecutesCrossingOrders
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.ExecutesCrossingOrders" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.ExecutesCrossingOrders" start time: Oct 22 19:05 UTC
+"MatchingTest.ExecutesCrossingOrders" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -185,7 +185,7 @@ Note: Google Test filter = MatchingTest.ExecutesCrossingOrders
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.ExecutesCrossingOrders" end time: Oct 22 19:05 UTC
+"MatchingTest.ExecutesCrossingOrders" end time: Oct 23 03:14 UTC
 "MatchingTest.ExecutesCrossingOrders" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -193,7 +193,7 @@ Test Passed.
 8/28 Test: MatchingTest.SupportsPartialFill
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.SupportsPartialFill" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.SupportsPartialFill" start time: Oct 22 19:05 UTC
+"MatchingTest.SupportsPartialFill" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -212,7 +212,7 @@ Note: Google Test filter = MatchingTest.SupportsPartialFill
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.SupportsPartialFill" end time: Oct 22 19:05 UTC
+"MatchingTest.SupportsPartialFill" end time: Oct 23 03:14 UTC
 "MatchingTest.SupportsPartialFill" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -220,7 +220,7 @@ Test Passed.
 9/28 Test: MatchingTest.PreservesPricePriority
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.PreservesPricePriority" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.PreservesPricePriority" start time: Oct 22 19:05 UTC
+"MatchingTest.PreservesPricePriority" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -236,10 +236,10 @@ Note: Google Test filter = MatchingTest.PreservesPricePriority
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.PreservesPricePriority" end time: Oct 22 19:05 UTC
+"MatchingTest.PreservesPricePriority" end time: Oct 23 03:14 UTC
 "MatchingTest.PreservesPricePriority" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -247,7 +247,7 @@ Test Passed.
 10/28 Test: MatchingTest.DoesNotMatchNonCrossingOrders
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.DoesNotMatchNonCrossingOrders" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.DoesNotMatchNonCrossingOrders" start time: Oct 22 19:05 UTC
+"MatchingTest.DoesNotMatchNonCrossingOrders" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -266,7 +266,7 @@ Note: Google Test filter = MatchingTest.DoesNotMatchNonCrossingOrders
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.DoesNotMatchNonCrossingOrders" end time: Oct 22 19:05 UTC
+"MatchingTest.DoesNotMatchNonCrossingOrders" end time: Oct 23 03:14 UTC
 "MatchingTest.DoesNotMatchNonCrossingOrders" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -274,7 +274,7 @@ Test Passed.
 11/28 Test: MatchingTest.PreservesFifoAtSamePrice
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.PreservesFifoAtSamePrice" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.PreservesFifoAtSamePrice" start time: Oct 22 19:05 UTC
+"MatchingTest.PreservesFifoAtSamePrice" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -293,7 +293,7 @@ Note: Google Test filter = MatchingTest.PreservesFifoAtSamePrice
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.PreservesFifoAtSamePrice" end time: Oct 22 19:05 UTC
+"MatchingTest.PreservesFifoAtSamePrice" end time: Oct 23 03:14 UTC
 "MatchingTest.PreservesFifoAtSamePrice" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -301,7 +301,7 @@ Test Passed.
 12/28 Test: MatchingTest.MatchesMultipleRestingOrders
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.MatchesMultipleRestingOrders" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.MatchesMultipleRestingOrders" start time: Oct 22 19:05 UTC
+"MatchingTest.MatchesMultipleRestingOrders" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -317,10 +317,10 @@ Note: Google Test filter = MatchingTest.MatchesMultipleRestingOrders
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.MatchesMultipleRestingOrders" end time: Oct 22 19:05 UTC
+"MatchingTest.MatchesMultipleRestingOrders" end time: Oct 23 03:14 UTC
 "MatchingTest.MatchesMultipleRestingOrders" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -328,7 +328,7 @@ Test Passed.
 13/28 Test: MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_matching" "--gtest_filter=MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" start time: Oct 22 19:05 UTC
+"MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -344,10 +344,10 @@ Note: Google Test filter = MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAn
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" end time: Oct 22 19:05 UTC
+"MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" end time: Oct 23 03:14 UTC
 "MatchingTest.ReportsExecutionOrderAcrossPriceLevelsAndFifo" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -355,7 +355,7 @@ Test Passed.
 14/28 Test: CancellationTest.CancelsBuyOrder
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_cancellation" "--gtest_filter=CancellationTest.CancelsBuyOrder" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"CancellationTest.CancelsBuyOrder" start time: Oct 22 19:05 UTC
+"CancellationTest.CancelsBuyOrder" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -374,7 +374,7 @@ Note: Google Test filter = CancellationTest.CancelsBuyOrder
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"CancellationTest.CancelsBuyOrder" end time: Oct 22 19:05 UTC
+"CancellationTest.CancelsBuyOrder" end time: Oct 23 03:14 UTC
 "CancellationTest.CancelsBuyOrder" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -382,7 +382,7 @@ Test Passed.
 15/28 Test: CancellationTest.CancelsBestAskAndRevealsNext
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_cancellation" "--gtest_filter=CancellationTest.CancelsBestAskAndRevealsNext" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"CancellationTest.CancelsBestAskAndRevealsNext" start time: Oct 22 19:05 UTC
+"CancellationTest.CancelsBestAskAndRevealsNext" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -398,10 +398,10 @@ Note: Google Test filter = CancellationTest.CancelsBestAskAndRevealsNext
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CancellationTest.CancelsBestAskAndRevealsNext" end time: Oct 22 19:05 UTC
+"CancellationTest.CancelsBestAskAndRevealsNext" end time: Oct 23 03:14 UTC
 "CancellationTest.CancelsBestAskAndRevealsNext" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -409,7 +409,7 @@ Test Passed.
 16/28 Test: CancellationTest.RejectsUnknownOrderId
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_cancellation" "--gtest_filter=CancellationTest.RejectsUnknownOrderId" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"CancellationTest.RejectsUnknownOrderId" start time: Oct 22 19:05 UTC
+"CancellationTest.RejectsUnknownOrderId" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -425,10 +425,10 @@ Note: Google Test filter = CancellationTest.RejectsUnknownOrderId
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CancellationTest.RejectsUnknownOrderId" end time: Oct 22 19:05 UTC
+"CancellationTest.RejectsUnknownOrderId" end time: Oct 23 03:14 UTC
 "CancellationTest.RejectsUnknownOrderId" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -436,7 +436,7 @@ Test Passed.
 17/28 Test: CancellationTest.CancelsOneOfTwoOrdersAtSamePrice
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_cancellation" "--gtest_filter=CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" start time: Oct 22 19:05 UTC
+"CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -452,10 +452,10 @@ Note: Google Test filter = CancellationTest.CancelsOneOfTwoOrdersAtSamePrice
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" end time: Oct 22 19:05 UTC
+"CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" end time: Oct 23 03:14 UTC
 "CancellationTest.CancelsOneOfTwoOrdersAtSamePrice" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -463,7 +463,7 @@ Test Passed.
 18/28 Test: InvariantTest.PartialFillUpdatesRemainingQuantity
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.PartialFillUpdatesRemainingQuantity" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.PartialFillUpdatesRemainingQuantity" start time: Oct 22 19:05 UTC
+"InvariantTest.PartialFillUpdatesRemainingQuantity" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -482,7 +482,7 @@ Note: Google Test filter = InvariantTest.PartialFillUpdatesRemainingQuantity
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.PartialFillUpdatesRemainingQuantity" end time: Oct 22 19:05 UTC
+"InvariantTest.PartialFillUpdatesRemainingQuantity" end time: Oct 23 03:14 UTC
 "InvariantTest.PartialFillUpdatesRemainingQuantity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -490,7 +490,7 @@ Test Passed.
 19/28 Test: InvariantTest.CancellationUpdatesAggregateQuantity
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.CancellationUpdatesAggregateQuantity" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.CancellationUpdatesAggregateQuantity" start time: Oct 22 19:05 UTC
+"InvariantTest.CancellationUpdatesAggregateQuantity" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -506,10 +506,10 @@ Note: Google Test filter = InvariantTest.CancellationUpdatesAggregateQuantity
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.CancellationUpdatesAggregateQuantity" end time: Oct 22 19:05 UTC
+"InvariantTest.CancellationUpdatesAggregateQuantity" end time: Oct 23 03:14 UTC
 "InvariantTest.CancellationUpdatesAggregateQuantity" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -517,7 +517,7 @@ Test Passed.
 20/28 Test: InvariantTest.EmptyPriceLevelIsRemoved
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.EmptyPriceLevelIsRemoved" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.EmptyPriceLevelIsRemoved" start time: Oct 22 19:05 UTC
+"InvariantTest.EmptyPriceLevelIsRemoved" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -536,7 +536,7 @@ Note: Google Test filter = InvariantTest.EmptyPriceLevelIsRemoved
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.EmptyPriceLevelIsRemoved" end time: Oct 22 19:05 UTC
+"InvariantTest.EmptyPriceLevelIsRemoved" end time: Oct 23 03:14 UTC
 "InvariantTest.EmptyPriceLevelIsRemoved" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -544,7 +544,7 @@ Test Passed.
 21/28 Test: InvariantTest.FullyFilledOrderIdCanBeReused
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.FullyFilledOrderIdCanBeReused" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.FullyFilledOrderIdCanBeReused" start time: Oct 22 19:05 UTC
+"InvariantTest.FullyFilledOrderIdCanBeReused" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -560,10 +560,10 @@ Note: Google Test filter = InvariantTest.FullyFilledOrderIdCanBeReused
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.FullyFilledOrderIdCanBeReused" end time: Oct 22 19:05 UTC
+"InvariantTest.FullyFilledOrderIdCanBeReused" end time: Oct 23 03:14 UTC
 "InvariantTest.FullyFilledOrderIdCanBeReused" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -571,7 +571,7 @@ Test Passed.
 22/28 Test: InvariantTest.RejectsQuantityOverflowAndInvalidSide
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.RejectsQuantityOverflowAndInvalidSide" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.RejectsQuantityOverflowAndInvalidSide" start time: Oct 22 19:05 UTC
+"InvariantTest.RejectsQuantityOverflowAndInvalidSide" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -590,7 +590,7 @@ Note: Google Test filter = InvariantTest.RejectsQuantityOverflowAndInvalidSide
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.RejectsQuantityOverflowAndInvalidSide" end time: Oct 22 19:05 UTC
+"InvariantTest.RejectsQuantityOverflowAndInvalidSide" end time: Oct 23 03:14 UTC
 "InvariantTest.RejectsQuantityOverflowAndInvalidSide" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -598,7 +598,7 @@ Test Passed.
 23/28 Test: InvariantTest.SeededAddsAndCancellationsPreserveAggregates
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_invariants" "--gtest_filter=InvariantTest.SeededAddsAndCancellationsPreserveAggregates" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"InvariantTest.SeededAddsAndCancellationsPreserveAggregates" start time: Oct 22 19:05 UTC
+"InvariantTest.SeededAddsAndCancellationsPreserveAggregates" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -607,17 +607,17 @@ Note: Google Test filter = InvariantTest.SeededAddsAndCancellationsPreserveAggre
 [----------] Global test environment set-up.
 [----------] 1 test from InvariantTest
 [ RUN      ] InvariantTest.SeededAddsAndCancellationsPreserveAggregates
-[       OK ] InvariantTest.SeededAddsAndCancellationsPreserveAggregates (75 ms)
-[----------] 1 test from InvariantTest (75 ms total)
+[       OK ] InvariantTest.SeededAddsAndCancellationsPreserveAggregates (41 ms)
+[----------] 1 test from InvariantTest (41 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (75 ms total)
+[==========] 1 test from 1 test suite ran. (41 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.08 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"InvariantTest.SeededAddsAndCancellationsPreserveAggregates" end time: Oct 22 19:05 UTC
+"InvariantTest.SeededAddsAndCancellationsPreserveAggregates" end time: Oct 23 03:14 UTC
 "InvariantTest.SeededAddsAndCancellationsPreserveAggregates" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -625,7 +625,7 @@ Test Passed.
 24/28 Test: DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator" "--gtest_filter=DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" start time: Oct 22 19:05 UTC
+"DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -641,10 +641,10 @@ Note: Google Test filter = DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMut
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" end time: Oct 22 19:05 UTC
+"DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" end time: Oct 23 03:14 UTC
 "DepthSnapshotTest.OrdersLevelsAndAggregatesWithoutMutatingBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -652,7 +652,7 @@ Test Passed.
 25/28 Test: DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator" "--gtest_filter=DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" start time: Oct 22 19:05 UTC
+"DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -671,7 +671,7 @@ Note: Google Test filter = DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySna
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" end time: Oct 22 19:05 UTC
+"DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" end time: Oct 23 03:14 UTC
 "DepthSnapshotTest.EmptyBookAndZeroDepthReturnEmptySnapshots" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -679,7 +679,7 @@ Test Passed.
 26/28 Test: ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator" "--gtest_filter=ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" start time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -695,10 +695,10 @@ Note: Google Test filter = ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnl
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" end time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" end time: Oct 23 03:14 UTC
 "ExchangeSimulatorTest.EmitsTradeThenLevelEventsAndOnlyChangedQuote" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -706,7 +706,7 @@ Test Passed.
 27/28 Test: ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator" "--gtest_filter=ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" start time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -722,10 +722,10 @@ Note: Google Test filter = ExchangeSimulatorTest.ReportsCancellationAndRejectsNo
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" end time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" end time: Oct 23 03:14 UTC
 "ExchangeSimulatorTest.ReportsCancellationAndRejectsNoOpsWithoutEvents" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -733,7 +733,7 @@ Test Passed.
 28/28 Test: ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook
 Command: "/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator" "--gtest_filter=ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" "--gtest_also_run_disabled_tests"
 Directory: /home/devshiv/projects/limit-order-book/build-release
-"ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" start time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" start time: Oct 23 03:14 UTC
 Output:
 ----------------------------------------------------------
 Running main() from ./googletest/src/gtest_main.cc
@@ -752,8 +752,8 @@ Note: Google Test filter = ExchangeSimulatorTest.RejectsAggregateOverflowWithout
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" end time: Oct 22 19:05 UTC
+"ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" end time: Oct 23 03:14 UTC
 "ExchangeSimulatorTest.RejectsAggregateOverflowWithoutChangingBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 22 19:05 UTC
+End testing: Oct 23 03:14 UTC

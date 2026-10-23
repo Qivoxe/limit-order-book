@@ -40,6 +40,174 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /home/devshiv/projects/limit-order-book/build-release/
+
+#############################################
+# Utility command for Experimental
+
+build Experimental: phony CMakeFiles/Experimental
+
+
+#############################################
+# Utility command for Nightly
+
+build Nightly: phony CMakeFiles/Nightly
+
+
+#############################################
+# Utility command for Continuous
+
+build Continuous: phony CMakeFiles/Continuous
+
+
+#############################################
+# Utility command for NightlyMemoryCheck
+
+build NightlyMemoryCheck: phony CMakeFiles/NightlyMemoryCheck
+
+
+#############################################
+# Utility command for NightlyStart
+
+build NightlyStart: phony CMakeFiles/NightlyStart
+
+
+#############################################
+# Utility command for NightlyUpdate
+
+build NightlyUpdate: phony CMakeFiles/NightlyUpdate
+
+
+#############################################
+# Utility command for NightlyConfigure
+
+build NightlyConfigure: phony CMakeFiles/NightlyConfigure
+
+
+#############################################
+# Utility command for NightlyBuild
+
+build NightlyBuild: phony CMakeFiles/NightlyBuild
+
+
+#############################################
+# Utility command for NightlyTest
+
+build NightlyTest: phony CMakeFiles/NightlyTest
+
+
+#############################################
+# Utility command for NightlyCoverage
+
+build NightlyCoverage: phony CMakeFiles/NightlyCoverage
+
+
+#############################################
+# Utility command for NightlyMemCheck
+
+build NightlyMemCheck: phony CMakeFiles/NightlyMemCheck
+
+
+#############################################
+# Utility command for NightlySubmit
+
+build NightlySubmit: phony CMakeFiles/NightlySubmit
+
+
+#############################################
+# Utility command for ExperimentalStart
+
+build ExperimentalStart: phony CMakeFiles/ExperimentalStart
+
+
+#############################################
+# Utility command for ExperimentalUpdate
+
+build ExperimentalUpdate: phony CMakeFiles/ExperimentalUpdate
+
+
+#############################################
+# Utility command for ExperimentalConfigure
+
+build ExperimentalConfigure: phony CMakeFiles/ExperimentalConfigure
+
+
+#############################################
+# Utility command for ExperimentalBuild
+
+build ExperimentalBuild: phony CMakeFiles/ExperimentalBuild
+
+
+#############################################
+# Utility command for ExperimentalTest
+
+build ExperimentalTest: phony CMakeFiles/ExperimentalTest
+
+
+#############################################
+# Utility command for ExperimentalCoverage
+
+build ExperimentalCoverage: phony CMakeFiles/ExperimentalCoverage
+
+
+#############################################
+# Utility command for ExperimentalMemCheck
+
+build ExperimentalMemCheck: phony CMakeFiles/ExperimentalMemCheck
+
+
+#############################################
+# Utility command for ExperimentalSubmit
+
+build ExperimentalSubmit: phony CMakeFiles/ExperimentalSubmit
+
+
+#############################################
+# Utility command for ContinuousStart
+
+build ContinuousStart: phony CMakeFiles/ContinuousStart
+
+
+#############################################
+# Utility command for ContinuousUpdate
+
+build ContinuousUpdate: phony CMakeFiles/ContinuousUpdate
+
+
+#############################################
+# Utility command for ContinuousConfigure
+
+build ContinuousConfigure: phony CMakeFiles/ContinuousConfigure
+
+
+#############################################
+# Utility command for ContinuousBuild
+
+build ContinuousBuild: phony CMakeFiles/ContinuousBuild
+
+
+#############################################
+# Utility command for ContinuousTest
+
+build ContinuousTest: phony CMakeFiles/ContinuousTest
+
+
+#############################################
+# Utility command for ContinuousCoverage
+
+build ContinuousCoverage: phony CMakeFiles/ContinuousCoverage
+
+
+#############################################
+# Utility command for ContinuousMemCheck
+
+build ContinuousMemCheck: phony CMakeFiles/ContinuousMemCheck
+
+
+#############################################
+# Utility command for ContinuousSubmit
+
+build ContinuousSubmit: phony CMakeFiles/ContinuousSubmit
+
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target lob
 
@@ -52,7 +220,7 @@ build cmake_object_order_depends_target_lob: phony || .
 build CMakeFiles/lob.dir/src/order_book.cpp.o: CXX_COMPILER__lob_unscanned_Release /home/devshiv/projects/limit-order-book/src/order_book.cpp || cmake_object_order_depends_target_lob
   CONFIG = Release
   DEP_FILE = CMakeFiles/lob.dir/src/order_book.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++20
+  FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic
   INCLUDES = -I/home/devshiv/projects/limit-order-book/include
   OBJECT_DIR = CMakeFiles/lob.dir
   OBJECT_FILE_DIR = CMakeFiles/lob.dir/src
@@ -116,6 +284,45 @@ build lob_engine: CXX_EXECUTABLE_LINKER__lob_engine_Release CMakeFiles/lob_engin
   TARGET_SUPPORT_DIR = CMakeFiles/lob_engine.dir
 
 # =============================================================================
+# Object build statements for EXECUTABLE target lob_protocol
+
+
+#############################################
+# Order-only phony target for lob_protocol
+
+build cmake_object_order_depends_target_lob_protocol: phony || cmake_object_order_depends_target_lob
+
+build CMakeFiles/lob_protocol.dir/src/protocol_main.cpp.o: CXX_COMPILER__lob_protocol_unscanned_Release /home/devshiv/projects/limit-order-book/src/protocol_main.cpp || cmake_object_order_depends_target_lob_protocol
+  CONFIG = Release
+  DEP_FILE = CMakeFiles/lob_protocol.dir/src/protocol_main.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++20
+  INCLUDES = -I/home/devshiv/projects/limit-order-book/include
+  OBJECT_DIR = CMakeFiles/lob_protocol.dir
+  OBJECT_FILE_DIR = CMakeFiles/lob_protocol.dir/src
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_protocol.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lob_protocol
+
+
+#############################################
+# Link the executable lob_protocol
+
+build lob_protocol: CXX_EXECUTABLE_LINKER__lob_protocol_Release CMakeFiles/lob_protocol.dir/src/protocol_main.cpp.o | liblob.a || liblob.a
+  CONFIG = Release
+  DEP_FILE = CMakeFiles/lob_protocol.dir/link.d
+  FLAGS = -O3 -DNDEBUG
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/lob_protocol.dir/link.d
+  LINK_LIBRARIES = liblob.a
+  OBJECT_DIR = CMakeFiles/lob_protocol.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lob_protocol
+  TARGET_PDB = lob_protocol.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles/lob_protocol.dir
+
+# =============================================================================
 # Object build statements for EXECUTABLE target test_order
 
 
@@ -141,16 +348,15 @@ build CMakeFiles/test_order.dir/tests/test_order.cpp.o: CXX_COMPILER__test_order
 #############################################
 # Link the executable test_order
 
-build test_order test_order[1]_tests.cmake | ${cmake_ninja_workdir}test_order[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_order_Release CMakeFiles/test_order.dir/tests/test_order.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_order: CXX_EXECUTABLE_LINKER__test_order_Release CMakeFiles/test_order.dir/tests/test_order.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_order.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_order.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_order.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_order -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_order -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_order[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_order
   TARGET_PDB = test_order.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_order.dir
@@ -181,16 +387,15 @@ build CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o: CXX_COMPILER__
 #############################################
 # Link the executable test_order_book
 
-build test_order_book test_order_book[1]_tests.cmake | ${cmake_ninja_workdir}test_order_book[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_order_book_Release CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_order_book: CXX_EXECUTABLE_LINKER__test_order_book_Release CMakeFiles/test_order_book.dir/tests/test_order_book.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_order_book.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_order_book.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_order_book.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_order_book -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_order_book -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_order_book_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_order_book[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_order_book
   TARGET_PDB = test_order_book.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_order_book.dir
@@ -221,16 +426,15 @@ build CMakeFiles/test_matching.dir/tests/test_matching.cpp.o: CXX_COMPILER__test
 #############################################
 # Link the executable test_matching
 
-build test_matching test_matching[1]_tests.cmake | ${cmake_ninja_workdir}test_matching[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_matching_Release CMakeFiles/test_matching.dir/tests/test_matching.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_matching: CXX_EXECUTABLE_LINKER__test_matching_Release CMakeFiles/test_matching.dir/tests/test_matching.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_matching.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_matching.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_matching.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_matching -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_matching -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_matching_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_matching[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_matching
   TARGET_PDB = test_matching.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_matching.dir
@@ -261,16 +465,15 @@ build CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o: CXX_COMPIL
 #############################################
 # Link the executable test_cancellation
 
-build test_cancellation test_cancellation[1]_tests.cmake | ${cmake_ninja_workdir}test_cancellation[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_cancellation_Release CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_cancellation: CXX_EXECUTABLE_LINKER__test_cancellation_Release CMakeFiles/test_cancellation.dir/tests/test_cancellation.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_cancellation.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_cancellation.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_cancellation.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_cancellation -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_cancellation -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_cancellation_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_cancellation[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_cancellation
   TARGET_PDB = test_cancellation.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_cancellation.dir
@@ -301,16 +504,15 @@ build CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o: CXX_COMPILER__
 #############################################
 # Link the executable test_invariants
 
-build test_invariants test_invariants[1]_tests.cmake | ${cmake_ninja_workdir}test_invariants[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_invariants_Release CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_invariants: CXX_EXECUTABLE_LINKER__test_invariants_Release CMakeFiles/test_invariants.dir/tests/test_invariants.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_invariants.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_invariants.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_invariants.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_invariants -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_invariants -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_invariants_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_invariants[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_invariants
   TARGET_PDB = test_invariants.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_invariants.dir
@@ -341,16 +543,15 @@ build CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o
 #############################################
 # Link the executable test_exchange_simulator
 
-build test_exchange_simulator test_exchange_simulator[1]_tests.cmake | ${cmake_ninja_workdir}test_exchange_simulator[1]_tests.cmake: CXX_EXECUTABLE_LINKER__test_exchange_simulator_Release CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
+build test_exchange_simulator: CXX_EXECUTABLE_LINKER__test_exchange_simulator_Release CMakeFiles/test_exchange_simulator.dir/tests/test_exchange_simulator.cpp.o | liblob.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || liblob.a
   CONFIG = Release
   DEP_FILE = CMakeFiles/test_exchange_simulator.dir/link.d
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/test_exchange_simulator.dir/link.d
   LINK_LIBRARIES = liblob.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = CMakeFiles/test_exchange_simulator.dir
-  POST_BUILD = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/cmake -D TEST_TARGET=test_exchange_simulator -D TEST_EXECUTABLE=/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/devshiv/projects/limit-order-book/build-release -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_exchange_simulator_TESTS -D CTEST_FILE=/home/devshiv/projects/limit-order-book/build-release/test_exchange_simulator[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-4.2/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = :
   PRE_LINK = :
-  RESTAT = 1
   TARGET_FILE = test_exchange_simulator
   TARGET_PDB = test_exchange_simulator.dbg
   TARGET_SUPPORT_DIR = CMakeFiles/test_exchange_simulator.dir
@@ -468,6 +669,230 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Custom command for CMakeFiles/Experimental
+
+build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Nightly
+
+build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/Continuous
+
+build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemoryCheck
+
+build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=NightlyMemoryCheck -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyStart
+
+build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Start -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyUpdate
+
+build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Update -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyConfigure
+
+build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Configure -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyBuild
+
+build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Build -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyTest
+
+build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Test -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyCoverage
+
+build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Coverage -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlyMemCheck
+
+build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=MemCheck -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/NightlySubmit
+
+build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Nightly -DACTIONS=Submit -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalStart
+
+build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Start -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalUpdate
+
+build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Update -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalConfigure
+
+build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Configure -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalBuild
+
+build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Build -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalTest
+
+build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Test -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalCoverage
+
+build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Coverage -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalMemCheck
+
+build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=MemCheck -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ExperimentalSubmit
+
+build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Experimental -DACTIONS=Submit -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousStart
+
+build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousStart: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Start -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousUpdate
+
+build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Update -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousConfigure
+
+build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Configure -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousBuild
+
+build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Build -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousTest
+
+build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTest: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Test -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousCoverage
+
+build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Coverage -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousMemCheck
+
+build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=MemCheck -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
+
+#############################################
+# Custom command for CMakeFiles/ContinuousSubmit
+
+build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
+  COMMAND = cd /home/devshiv/projects/limit-order-book/build-release && /usr/bin/ctest -DMODEL=Continuous -DACTIONS=Submit -S CMakeFiles/CTestScript.cmake -V
+  pool = console
+
 # =============================================================================
 # Target aliases.
 
@@ -481,7 +906,7 @@ build lob: phony liblob.a
 #############################################
 # Folder: /home/devshiv/projects/limit-order-book/build-release
 
-build all: phony liblob.a lob_engine test_order test_order_book test_matching test_cancellation test_invariants test_exchange_simulator lob_benchmark cancellation_benchmark
+build all: phony liblob.a lob_engine lob_protocol test_order test_order_book test_matching test_cancellation test_invariants test_exchange_simulator lob_benchmark cancellation_benchmark
 
 # =============================================================================
 # Built-in targets
@@ -490,14 +915,14 @@ build all: phony liblob.a lob_engine test_order test_order_book test_matching te
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /home/devshiv/projects/limit-order-book/build-release/cmake_install.cmake /home/devshiv/projects/limit-order-book/build-release/CTestTestfile.cmake: RERUN_CMAKE | /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
+build build.ninja /home/devshiv/projects/limit-order-book/build-release/cmake_install.cmake /home/devshiv/projects/limit-order-book/build-release/CTestTestfile.cmake: RERUN_CMAKE | /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CTest.cmake /usr/share/cmake-4.2/Modules/CTestTargets.cmake /usr/share/cmake-4.2/Modules/CTestUseLaunchers.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/DartConfiguration.tcl.in /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake /usr/share/cmake-4.2/Templates/CTestScript.cmake.in CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
+build /home/devshiv/projects/limit-order-book/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake /usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake /usr/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-4.2/Modules/CMakeGenericSystem.cmake /usr/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-4.2/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-4.2/Modules/CTest.cmake /usr/share/cmake-4.2/Modules/CTestTargets.cmake /usr/share/cmake-4.2/Modules/CTestUseLaunchers.cmake /usr/share/cmake-4.2/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-4.2/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-4.2/Modules/CheckLibraryExists.cmake /usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Compiler/GNU.cmake /usr/share/cmake-4.2/Modules/DartConfiguration.tcl.in /usr/share/cmake-4.2/Modules/FindGTest.cmake /usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-4.2/Modules/FindPackageMessage.cmake /usr/share/cmake-4.2/Modules/FindThreads.cmake /usr/share/cmake-4.2/Modules/GoogleTest.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake /usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-4.2/Modules/Linker/GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linker/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-4.2/Modules/Platform/Linux.cmake /usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake /usr/share/cmake-4.2/Templates/CTestScript.cmake.in CMakeCache.txt CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
 
 
 #############################################

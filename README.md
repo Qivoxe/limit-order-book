@@ -80,6 +80,29 @@ ctest --test-dir build-release --output-on-failure
 
 `BUILD_TESTING` controls GoogleTest targets. `LOB_BUILD_BENCHMARKS` and `LOB_BUILD_DEMO` independently control benchmark and demo executables. Common warnings are enabled by default for the core library (`-Wall -Wextra -Wpedantic` for GCC/Clang, `/W4` for MSVC); set `LOB_ENABLE_WARNINGS=OFF` to disable them.
 
+## Streamlit dashboard
+
+The `dashboard/` application presents a local trading-terminal view backed by the real C++ engine. It builds `lob_protocol` with the normal CMake targets; Python communicates through a versioned, line-framed TSV subprocess protocol. No separate Python matching logic or market data is used. Prices are displayed as integer ticks, and the simulation is scoped to the active Streamlit session.
+
+Create a Python virtual environment and install the small dashboard dependency set:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r dashboard/requirements.txt
+```
+
+Build the Release app and run C++ and Python checks:
+
+```sh
+cmake -S . -B build-release -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build-release --parallel
+ctest --test-dir build-release --output-on-failure
+LOB_PROTOCOL_EXECUTABLE="$PWD/build-release/lob_protocol" python -m unittest discover -s dashboard -p 'test_*.py' -v
+```
+
+Launch with `python -m streamlit run dashboard/app.py`. For complete setup, protocol details, features, and limitations, see `dashboard/README.md`.
+
 ## Market-data interface
 
 `OrderBook::depth_snapshot(n)` returns owned vectors of up to `n` levels on each side. The snapshot does not expose mutable internal levels. A zero-depth request and an empty book return empty vectors.

@@ -8,3 +8,6 @@
 *.profraw
 *.swp
 *~
+__pycache__/
+*.py[cod]
+.venv/
